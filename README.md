@@ -1,5 +1,5 @@
 # web-backend-task-1 (4/28/2023)
-
+ - Task is practical in session on [session content](https://github.com/Open-Source-Community/web-backend-sessions)
 ## Task Description :
 
 - You are tasked with creating a web application that will allow users to search for books by title or author. The application should have the following features:
