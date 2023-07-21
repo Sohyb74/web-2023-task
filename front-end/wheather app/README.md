@@ -19,6 +19,6 @@ The Weather App is a web application that allows users to get current weather in
 
 ## helper desgin
 
-[https://drive.google.com/drive/folders/16_RtQUFaHCeijUXZJ2T3vCBnWQ66AMNI]( drive)
+[drive](https://drive.google.com/drive/folders/16_RtQUFaHCeijUXZJ2T3vCBnWQ66AMNI)
 
  
