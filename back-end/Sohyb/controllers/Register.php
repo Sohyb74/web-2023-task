@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
         array_push($errors, "Password must be at least 8 charactes long");
     }
 
-    require_once "../database.php";
+    require_once "/dp/database.php";
 
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = mysqli_query($connection, $sql);

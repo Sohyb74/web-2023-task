@@ -1,28 +1,3 @@
-<?php
-
-/*if (!isset($_SESSION)) {
-    session_start();
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $_SESSION['postdata'] = $_POST;
-    unset($_POST);
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit;
-}
-
-// This code can be used anywhere you redirect your user to using the header("Location: ...")
-if (array_key_exists('postdata', $_SESSION)) {
-    // Handle your submitted form here using the $_SESSION['postdata'] instead of $_POST
-
-    // After using the postdata, don't forget to unset/clear it
-    unset($_SESSION['postdata']);
-}
-*/
-if (isset($_SESSION["user"])) {
-    header("Location: index.php");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 

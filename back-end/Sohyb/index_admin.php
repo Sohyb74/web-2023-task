@@ -1,9 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION["user"])) {
+if (!isset($_SESSION["admin"])) {
     header("Location: login.html");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +28,12 @@ if (!isset($_SESSION["user"])) {
     <div class="container my-4">
         <header class="d-flex justify-content-between my-4">
             <h1>Book List</h1>
-           <!-- <<div>
+            <div>
                 <a href="create.php" class="btn btn-primary">Add New Book</a>
-            </div> -->
+            </div>
         </header>
         <?php
-        
+       
         if (isset($_SESSION["create"])) {
         ?>
             <div class="alert alert-success">
@@ -64,9 +65,11 @@ if (!isset($_SESSION["user"])) {
                 echo $_SESSION["delete"];
                 ?>
             </div>
-        <?php
+        <?php 
+   
             unset($_SESSION["delete"]);
         }
+       
         ?>
 
         <table class="table table-bordered">
@@ -82,10 +85,11 @@ if (!isset($_SESSION["user"])) {
             <tbody>
 
                 <?php
-                include('db/connect.php');
+               include('db/connect.php');
                 $sqlSelect = "SELECT * FROM books";
                 $result = mysqli_query($conn, $sqlSelect);
-                while ($data = mysqli_fetch_array($result)) {
+                while ($data = mysqli_fetch_array($result)) 
+                {
                 ?>
                     <tr>
                         <td><?php echo $data['id']; ?></td>
@@ -98,7 +102,6 @@ if (!isset($_SESSION["user"])) {
                             <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
-                    
                 <?php
                 }
                 ?>
